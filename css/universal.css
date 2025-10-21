@@ -1,0 +1,245 @@
+﻿body {
+    display: grid;
+    background-color: #634E68;
+    font-family: Bahnschrift;
+}
+
+h1 { /*use this for page title*/
+    padding: 20px;
+    padding-bottom:10px;
+    color: #D6144D;
+}
+
+h2 { /*use this for subsections of a page*/
+    color: #D6144D;
+}
+
+h3 { /*use this for names of gallery and doc options*/
+    color: #D6144D;
+}
+
+div { /*general font size for body text*/
+    font-size: 18px;
+    color: #FF557C;
+}
+
+p { /*use this for smaller descriptive text*/
+    margin: 5px;
+    font-size: 18px;
+    color: #FF557C;
+}
+
+/*==========================header specific===============================*/
+.header {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 1fr;
+    background-color: #9579C2;
+    width: 100%;
+}
+
+#beatty {
+    color: #D6144D;
+    font-family: Bahnschrift;
+    font-size: 50px;
+    -webkit-text-stroke: 3px #ffffff; /*white border*/
+    paint-order: stroke fill; /*draws the red over the white stroke*/
+
+    overflow-wrap: break-word;
+    text-align: center;
+    margin-right: 2%;
+    margin-left: 4%;
+}
+
+#jobtitle {
+    color: #B7F0EC;
+    font-family: Bahnschrift;
+    font-size: 30px;
+    -webkit-text-stroke: 3px #634E68; /*dark border*/
+    paint-order: stroke fill; /*draws the blue over the dark stroke*/
+
+    align-content: center;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+#socialscontainer {
+    display: flex;
+    flex-wrap:wrap;
+    background-color: #634E68;
+    align-items: center;
+    justify-content:center;
+    margin-left: 2%;
+    padding-left:4%;
+    
+}
+
+.socialsicon {
+    width: 100px;
+    height: 100px;
+}
+
+
+/*==========================area with sidebar and page contents===============================*/
+
+.content {
+    display: grid;
+    height: stretch;
+    grid-template-columns: 2fr 11fr; /*2 columns, 1:5 ratio*/
+}
+
+/*==========================sidebar specific===============================*/
+
+.sidebar {
+    background-color: #634E68;
+    display: flex;
+    flex-direction:column;
+
+    
+    padding:5%;
+    margin-left:7%;
+    margin-right:5%;
+    overflow-x:hidden;
+
+    position: sticky;
+    height:800px; /*needs a defined height for sticky to work*/
+    top: 0; /*the buttons stick to the screen no matter how much you scroll*/
+}
+
+.sidebar br { /*affects linebreaks only within the sidebar*/
+    display: block;
+    margin: 10px 0;
+}
+
+/*Main Button Categories*/
+.navbutton1 {
+    font-size: 20px;
+    border-style: none;
+    border-radius: 10px; /*rounds corners*/
+
+    padding: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #B7F0EC;
+    color: #66073B;
+}
+
+.navbutton1:hover{ /*swaps bg and text colros on hover*/
+    background-color:#66073B;
+    color:#B7F0EC;
+    /*indented to the left*/
+    position: relative;
+    left:2%;
+    
+}
+
+/*Button Subcategories*/
+.navbutton2 {
+    font-size: 18px;
+    border-color: #634E68; /*same color as sidebar, so thers a gap*/
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #B7F0EC;
+    color: #66073B;
+    /*indented to the left*/
+    position: relative;
+    left: 10%;
+}
+
+.navbutton2:hover{ /*swaps bg and text colros on hover*/
+    background-color:#66073B;
+    color:#B7F0EC;
+    /*indented to the left*/
+    position: relative;
+    left:4%;
+}
+
+/*========================== page specific ===============================*/
+
+.pagebounds {
+    background-color: #EDD9FF;
+    width: auto;
+    height: auto;
+    overflow-y: scroll;
+}
+
+.page {
+    background-color: #FFFFFF;
+    border-radius: 10px; /*rounds corners*/
+    margin: 50px; /*so when a div of this type is nested in .pagebounds, there is a purple border around the white active area here*/
+    display: block;
+    width: auto;
+    height: auto;
+    text-align: center;
+    justify-items:center;
+    align-items:center;
+    padding:20px;
+}
+
+.page div{
+    margin: 5px;
+}
+
+.page br {/*affects linebreaks only within the page contents*/
+    display: block;
+    margin: 10px 0;
+}
+
+.page br.largebr { /*class of br if I need a really large gap*/
+    display: block;
+    margin: 40px 0;
+}
+
+.page a{ /*standard button for internal links*/
+    width: auto;
+    border-style: none;
+    border-width: 2px;
+    border-radius: 10px;
+
+    background-color: #FF557C;
+    color: #ffffff;
+
+    font-size:18px;
+    font-family: Bahnschrift;
+    padding:5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.page a.gamebutton{ /*larger buttons for external links*/
+    font-size:20px;
+    padding:7px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.page a:hover{
+    background-color: #D6144D;
+    position: relative; /*dips down when hovered over*/
+    top:2px;
+}
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/* ===== Scrollbar CSS ===== */
+/*Using this site: https://codepen.io/stephenpaton-tech/full/JjRvGmY */
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #9579C2 #634E68;
+}
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 10px;
+}
+*::-webkit-scrollbar-track {
+    background: #634E68;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #9579C2;
+}

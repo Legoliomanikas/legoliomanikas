@@ -1,0 +1,20 @@
+﻿@keyframes leftToRight{
+    from {
+        transform: translateX(-800px);
+    }
+    to {
+        transform: translateX(800px);
+
+    }
+}
+
+.scrollhorz_right {
+    overflow-x: hidden; /*in case leaving the screen adds a brief horz. scroll window*/
+    animation-name: leftToRight;
+    animation-duration: 11s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+
+.

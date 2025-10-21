@@ -1,0 +1,90 @@
+﻿.galleryselectcontainer { /*container for navigation*/
+    display: flex;
+    justify-content: center; /*horizontal alignment of whole container*/
+    flex-wrap:wrap;
+    width:100%;
+}
+
+.galleryselect { /*navigation buttons on gallery and documentation pages*/
+    border-radius: 15px;
+    justify-items: center; /*horizontal alignment based on each individual child element*/
+    max-height: 25%;
+    width: 17%;
+    padding: 15px 25px 15px 25px;
+    background-color: #B7F0EC;
+    overflow: hidden;
+}
+
+.galleryselect:hover{
+    background-color: #66073B;
+    color:#B7F0EC;
+    position:relative; /*dips down when hovered over*/
+    top:5px;
+}
+.galleryselect:hover h3{ 
+    /*makes project title light color when hovered over. note that it has to be written in this order as .galleryselect h3:hover will only make it change volor when directly hovering over text*/
+    color:#ffffff;
+}
+.galleryselect:hover p{
+    color:#B7F0EC;
+}
+
+
+.gallerythumb { /*thumbnails for gallery images*/
+    padding-top: 25px;
+    width: 100%;
+    border-radius: 10px; /*rounded bottom only, idk why it does that on images */
+    
+}
+
+.navbar { /*Back/Forward in Documentation*/
+    width:100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr;
+    align-items: center;
+}
+
+.docutag { 
+    /*For marking what type of project someting is in Documentation (e.g. Game)*/
+    /*For Gallery, change the bg color of a blank docutag to match color of gallery thumbnail*/
+
+    padding: 10px 5px 10px 5px;
+    border-radius:10px 10px 0px 0px; /*rounded top flat bottom*/
+    background-color: #ffffff;
+
+    width:93%; /*need to specify width in css or else chrome has weird issues, but also firefox doesnt like that this is 100%asfjasilfjdflyhafdklhfadlhkfdh*/
+}
+
+
+/*===========================================SPECIFIC PAGES=================================================*/
+
+.coolborder { /*border for navbutton1 pages*/
+    background-color: white;
+    border-radius: 30px;
+    color: #EDD9FF;
+    padding: 20px;
+    border: 20px double;
+}
+
+.textborder { /*border for specific instances of text e.g. about me page*/
+    background-color: white;
+    border-radius: 30px;
+    color: #B7F0EC;
+    padding: 20px;
+    border: 5px solid;
+}
+
+.images { /*centering images on the page*/
+    display: flex;
+    align-items: center; /*vertical alignment based on each individual child element*/
+    justify-content:center; /*horizontal alignment of whole container*/
+    height:auto;
+    width:100%;
+    padding:5px;
+}
+
+
+
+
+
+
